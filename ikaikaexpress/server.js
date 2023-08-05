@@ -3,7 +3,7 @@ const express = require('express');
 const body_parser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: true }));
@@ -43,7 +43,7 @@ app.post('/mailchimp', (req, res) => {
       body: postData
    })
    .then(response => { 
-      res.status(200)
+      res.status(200).send('Successfully sent email.')
    }) 
 });
 
