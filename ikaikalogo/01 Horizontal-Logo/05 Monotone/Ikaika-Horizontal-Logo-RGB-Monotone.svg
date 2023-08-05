@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1905.69 559.37">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #a4acb4;
+      }
+
+      .cls-3 {
+        font-size: 84.7px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: ArchivoRoman-Bold, Archivo;
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        stroke-width: 5.57px;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        fill: #595e68;
+      }
+
+      .cls-6, .cls-8, .cls-9 {
+        stroke: #a4acb4;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-12 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-13, .cls-9 {
+        fill: none;
+      }
+
+      .cls-4 {
+        font-size: 267.5px;
+      }
+
+      .cls-8 {
+        stroke-width: 5.57px;
+      }
+
+      .cls-9 {
+        stroke-width: 16.71px;
+      }
+
+      .cls-14 {
+        letter-spacing: -.04em;
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-13" cx="266.39" cy="253.38" r="253.38"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-13" x="7.43" y="248.47" width="542.09" height="127.83" transform="translate(-63.13 70.65) rotate(-13)"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-3" transform="translate(1498.54 239.24)"><tspan x="0" y="0">ES</tspan><tspan class="cls-10" x="115.36" y="0">T</tspan><tspan x="165.42" y="0">. 202</tspan><tspan class="cls-11" x="359.38" y="0">0</tspan></text>
+    <g class="cls-12">
+      <circle class="cls-7" cx="266.39" cy="253.38" r="253.38"/>
+      <circle class="cls-6" cx="266.39" cy="253.38" r="194.9"/>
+      <circle class="cls-8" cx="266.39" cy="253.38" r="139.21"/>
+      <ellipse class="cls-9" cx="265.47" cy="250.08" rx="245.38" ry="38.98" transform="translate(-49.45 66.13) rotate(-13)"/>
+      <circle class="cls-2" cx="266.39" cy="253.38" r="83.53"/>
+      <g class="cls-5">
+        <g>
+          <path class="cls-7" d="m457.61,183.07c27.89,0,45.1,3.83,46.95,11.81,4.84,20.98-98.27,62.69-230.32,93.18-81.8,18.89-155.5,29.03-200.91,29.03-27.89,0-45.1-3.83-46.95-11.81-4.84-20.98,98.27-62.69,230.32-93.18,81.8-18.89,155.5-29.03,200.91-29.03m0-22.27c-48.66,0-125.64,11.06-205.92,29.6-64.97,15-125.28,33.19-169.83,51.21-22.54,9.12-40.18,17.86-52.42,25.99-7.54,5.01-13.18,9.86-17.23,14.83-8.99,11.03-9.06,21.24-7.53,27.86,2.03,8.79,8.9,20.35,30.14,25.53,9.79,2.39,22.39,3.55,38.51,3.55,48.66,0,125.64-11.06,205.92-29.6,64.97-15,125.28-33.19,169.83-51.21,22.54-9.12,40.18-17.86,52.42-25.99,7.54-5.01,13.18-9.86,17.23-14.83,8.99-11.03,9.06-21.24,7.53-27.86-2.03-8.79-8.9-20.35-30.14-25.53-9.79-2.39-22.39-3.55-38.51-3.55h0Z"/>
+          <ellipse class="cls-9" cx="265.47" cy="250.08" rx="245.38" ry="38.98" transform="translate(-49.45 66.13) rotate(-13)"/>
+        </g>
+      </g>
+    </g>
+    <text class="cls-4" transform="translate(555.14 239.26)"><tspan x="0" y="0">I</tspan><tspan class="cls-1" x="80.52" y="0">K</tspan><tspan x="268.03" y="0">AI</tspan><tspan class="cls-1" x="542.22" y="0">K</tspan><tspan x="729.74" y="0">A</tspan></text>
+    <text class="cls-4" transform="translate(555.12 450.77)"><tspan x="0" y="0">RECORD</tspan><tspan class="cls-14" x="1179.13" y="0">S</tspan></text>
+  </g>
+</svg>

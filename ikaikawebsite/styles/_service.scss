@@ -1,0 +1,41 @@
+.service__container { 
+    padding-bottom: 4rem; 
+    display: flex; 
+    > img { 
+        padding-right: 1rem; 
+        height: 350px;
+        object-fit: cover; 
+    }
+    
+    div { 
+        padding-left: 1rem;  
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        width: 50%; 
+        .service__tag { 
+            font-size: $s-p; 
+            color: $neutral-100; 
+            font-family: $f-2;
+            line-height: 1.5rem;
+        }
+        p { 
+            color: $neutral-100; 
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) { 
+    .service__container {
+        flex-direction: column; 
+        max-width: 700px;
+        img { 
+            padding: 0 0 2rem 0; 
+            width: 100%;
+        }
+        div { 
+            padding-left: 0; 
+            width: 100%; 
+        }
+    }
+}
