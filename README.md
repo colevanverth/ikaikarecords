@@ -2,10 +2,10 @@ This is an isolated monorepo containing the Ikaika Records LLC logo, website fro
 
 ## Overview
 The file structure is as follows: 
-   * './ikaikacms' - Strapi CMS with PostgresSQL database. 
-   * './ikaikaexpress' - Express app for connecting to integrations (see below).
-   * './ikaikawebsite' - NextJS app utilizing React comprising the front-end of the website. 
-   * './ikaikalogo' - Contains all the logo variations of the Ikaika Records LLC logo, including Illustrator files and font. 
+   * `./ikaikacms` - Strapi CMS with PostgresSQL database. 
+   * `./ikaikaexpress` - Express app for connecting to integrations (see below).
+   * `./ikaikawebsite` - NextJS app utilizing React comprising the front-end of the website. 
+   * `./ikaikalogo` - Contains all the logo variations of the Ikaika Records LLC logo, including Illustrator files and font. 
 
 ## Integrations
 The front-end connects two integrations through the Express app: 
