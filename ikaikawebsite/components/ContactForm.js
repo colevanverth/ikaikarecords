@@ -22,7 +22,7 @@ const ContactForm = ({serviceName}) => {
       }
 
       // Send contact info to backend for node mailer to process
-      const res = await fetch("http://localhost:3000/api/contact", {
+      const res = await fetch("http://127.0.0.1:3001/email", {
          method: "POST",
          body: JSON.stringify(contactInfo),
          headers: {
