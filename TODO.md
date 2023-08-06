@@ -6,13 +6,14 @@
 - [x] Ensure that the PostgresSQL database is pushed to GitHub.
 - [ ] Figma branding guidelines (delete everything else).
 - [ ] Style outbound CJ Ikaika email. 
-- [ ] Launch/test/cleanup new Express function for SendGrid. 
+- [x] Launch/test/cleanup new Express function for SendGrid. 
 - [ ] Launch static exported site onto Railway and finish writing instructions for how to use it (make sure environment variable instructions are clear).
 - [ ] Meta data and titles for every page. 
 
 ### Next
 - [ ] Integrate new images and GIF onto site. 
 - [ ] Migrate accounts over to CJ.
+- [ ] Set up Calendly.
 - [ ] Launch the site.
 
 ### Potential Style Integrations (High Priority)

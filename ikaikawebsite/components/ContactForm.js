@@ -18,7 +18,7 @@ const ContactForm = ({serviceName}) => {
          phone: document.getElementById('project__input__phone').value,
          email: document.getElementById('project__input__email').value,
          message: document.getElementById('project__input__message').value,
-         type: serviceName
+         service: serviceName
       }
 
       // Send contact info to backend for node mailer to process
