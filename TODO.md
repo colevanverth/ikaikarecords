@@ -3,8 +3,7 @@
 ### Urgent
 - [x] Update password information in encrypted accounts document. 
 - [x] Fix panning bug.
-- [ ] Add star background and rotating disk in navigation bar. 
-- [ ] Ensure that the PostgresSQL database is pushed to GitHub.
+- [x] Ensure that the PostgresSQL database is pushed to GitHub.
 - [ ] Figma branding guidelines (delete everything else).
 - [ ] Style outbound CJ Ikaika email. 
 - [ ] Launch/test/cleanup new Express function for SendGrid. 

@@ -1,8 +1,8 @@
 import { motion }  from "framer-motion"
-import { appear } from '../../components/Appear'; 
+import { appear } from '../components/Appear'; 
 import Image from "next/image" 
 
-import Header from "../../components/Header"
+import Header from "../components/Header"
 
 const About = () => { 
    return (

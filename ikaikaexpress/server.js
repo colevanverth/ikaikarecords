@@ -1,16 +1,19 @@
 const sgMail = require('@sendgrid/mail')
 require('dotenv').config()
-const fetch = require('node-fetch');
+const fetch = require('node-fetch');      // Needed as add on for Railway compatability. 
 const express = require('express');
-const body_parser = require('body-parser');
+const body_parser = require('body-parser');     // For parsing JSON.
 const app = express();
 const port = process.env.PORT || 3001;
 
+// Set API key for SendGrid.
 sgMail.setApiKey(process.env.SENDGRIDKEY);
 
+// Body Parser configuration. 
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({ extended: true }));
 
+// CORS fix to be able to test locally with NextJS from Stack Overflow. 
 app.use((req, res, next) => {
    res.header("Access-Control-Allow-Origin", "*");
    res.header(
@@ -24,57 +27,46 @@ app.use((req, res, next) => {
    next();
 });
 
+/*
+* Integration with SendGrid that alerts CJ when someone fills out the contact form. 
+*/
 app.post('/email', (req, res) => {
+   // Set up payload. 
    const contactInfo = req.body
    console.log(contactInfo)
-
-   text = `
-          Name: ${contactInfo.name}
-          Email: ${contactInfo.email}
-          Phone: ${contactInfo.phone ? contactInfo.phone : "None Provided"}
-          Message: ${contactInfo.message}
-   `
    const msg = {
-  to: 'colevanverth@gmail.com',
-  from: 'ikaikarecordstemp@gmail.com', // Use the email address or domain you verified above
-  subject: 'Sending with Twilio SendGrid is Fun',
-  text: 'text',
-  html: `
-      <b>Name:</b> ${contactInfo.name}
-      <b>Email:</b> ${contactInfo.email}
-      <b>Phone:</b> ${contactInfo.phone ? contactInfo.phone : "None Provided"}
-      <b>Message:</b> ${contactInfo.message}
-  `,
-};
-//ES6
-sgMail
-  .send(msg)
-  .then(() => {}, error => {
-    console.error(error);
+      to: 'colevanverth@gmail.com',
+      from: 'ikaikarecordstemp@gmail.com', // Use the email address or domain you verified above
+      subject: 'Sending with Twilio SendGrid is Fun',
+      text: 'text',
+      html: `
+         <b>Name:</b> ${contactInfo.name}
+         <b>Email:</b> ${contactInfo.email}
+         <b>Phone:</b> ${contactInfo.phone ? contactInfo.phone : "None Provided"}
+         <b>Message:</b> ${contactInfo.message}
+      `,
+   };
 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  });
-//ES8
-(async () => {
-  try {
-    await sgMail.send(msg);
-  } catch (error) {
-    console.error(error);
+   // SendGrid API call (EcmaScript8 compatible).
+   (async () => {
+     try {
+       await sgMail.send(msg);
+     } catch (error) {
+       console.error(error);
 
-    if (error.response) {
-      console.error(error.response.body)
-    }
-  }
-})();
+       if (error.response) {
+         console.error(error.response.body)
+       }
+     }
+   })();
 
 });
 
-// Mailchimp route.
+/*
+* Integration with Mailchimp that signs the user up. 
+*/
 app.post('/mailchimp', (req, res) => { 
-   
-   // Setting up payload. 
+   // Set up payload. 
    const email = req.body.email; 
    console.log(email)
    const data = {
@@ -87,7 +79,7 @@ app.post('/mailchimp', (req, res) => {
    };
    const postData = JSON.stringify(data);
 
-   // Fetch call to Mailchimp API.
+   // Fetch call to Mailchimp.
    fetch('https://us14.api.mailchimp.com/3.0/lists/26861e53a9', {
       method: 'POST',
       headers: {
@@ -100,6 +92,7 @@ app.post('/mailchimp', (req, res) => {
    }) 
 });
 
+// Start Express app. 
 app.listen(Number(port), "0.0.0.0", () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
