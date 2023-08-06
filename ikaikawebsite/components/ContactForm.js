@@ -49,7 +49,7 @@ const ContactForm = ({serviceName}) => {
 
                      <div className="project__input" second="">
                         <a> PHONE (OPTIONAL) </a> 
-                        <input type="tel" id="project__input__phone" placeholder="999-999-9999" className="project__input__text" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/> 
+                        <input type="tel" id="project__input__phone" placeholder="999-999-9999" className="project__input__text"/> 
                      </div>
 
                      <div className="project__input" third="">

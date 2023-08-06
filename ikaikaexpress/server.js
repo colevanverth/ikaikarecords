@@ -54,7 +54,7 @@ app.post('/email', (req, res) => {
   <body style="margin: 0; padding: 0; box-sizing: border-box; display: flex; align-items: center; justify-content: center; ">
    <div class="container" style="font-family: 'Space Grotesk', sans-serif; line-height: 1.5; width: 700px; height: 100%; padding: 36px;  margin: 0; padding: 0; box-sizing: border-box;">
       <img align="right" src="https://res.cloudinary.com/daazndobg/image/upload/v1691292031/Ikaika-Horizontal-Logo-RGB-Inverse-Medium_z7k0om.png" alt="Ikaika Records logo." width="175" style="margin-left: auto; margin-right: 0;">
-      <p style="font-size: 13.5px; color: #595E68; margin: 0; padding: 120px 0 0 0; box-sizing: border-box;">SOUND MIXING AND MASTERING</p>
+      <p style="font-size: 13.5px; color: #595E68; margin: 0; padding: 120px 0 0 0; box-sizing: border-box;">${contactInfo.serviceName.toUpperCase()} /</p>
       <h1 style="font-weight: 600; font-size: 23.99px; color: #161A1E; margin: 0; padding: 0; box-sizing: border-box;">NEW MESSAGE</h1>
       <div class="blue_underline" style="width: 100%; height: 2px; background: #1C6590; margin-bottom: 18px;"></div>
       <div class="outer_container" style="background: #F9F9F9; padding: 18px; margin: 5px 0 18px 0; box-sizing: border-box;">
