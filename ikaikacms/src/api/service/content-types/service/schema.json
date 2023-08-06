@@ -32,6 +32,11 @@
     },
     "imageLink": {
       "type": "string"
+    },
+    "metadescription": {
+      "type": "text",
+      "required": true,
+      "default": "A meta description that describes the service in about 150 characters. "
     }
   }
 }

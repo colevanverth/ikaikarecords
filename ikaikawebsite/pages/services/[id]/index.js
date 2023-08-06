@@ -5,6 +5,7 @@ import EquipmentList from "../../../components/EquipmentList"
 import Image from "next/image"
 import Script from "next/script"
 import {useRouter} from "next/router"
+import Head from "next/head"
 import {useEffect, useState} from "react"
 import {motion} from "framer-motion"
 
@@ -48,6 +49,14 @@ const ServicePage = ({service}) => {
       }
    })
    return (
+      <>
+    <Head>
+         <title>{service.attributes.name} - Ikaika Records</title> 
+         <meta
+            name='description'
+            content={service.attributes.metadescription} 
+         />
+      </Head>
       <div className="radial__gradient"> 
          <div className="page__padding" />
          <Header headerName={service.attributes.name} prev="services"/>
@@ -61,7 +70,8 @@ const ServicePage = ({service}) => {
 
          <div className="content__container" > 
             <div className="servicepage__description">
-               <Image src={service.attributes.imageLink} width={0} height={0} unoptimized={true} alt="Galaxy icon superimposed over blue circle" />
+               <img alt={service.attributes.alt} src={service.attributes.imageLink}/>
+               <h4> {service.attributes.name.toUpperCase()} - {service.attributes.tag.toUpperCase()} </h4>
                <p> {service.attributes.description} </p>
             </div> 
          </div> 
@@ -78,6 +88,7 @@ const ServicePage = ({service}) => {
 
 
       </div> 
+      </>
    )
 }
 

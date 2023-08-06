@@ -1,5 +1,5 @@
+import Header from './Header'
 import {useState} from "react"
-
 import { motion } from "framer-motion";
 
 const ContactForm = ({serviceName}) => { 
@@ -22,7 +22,7 @@ const ContactForm = ({serviceName}) => {
       }
 
       // Send contact info to backend for node mailer to process
-      const res = await fetch("http://127.0.0.1:3001/email", {
+      const res = await fetch("https://ikaikarecords-production.up.railway.app/email", {
          method: "POST",
          body: JSON.stringify(contactInfo),
          headers: {
@@ -37,34 +37,36 @@ const ContactForm = ({serviceName}) => {
    return (
       <>
          { !formSent ? 
-            <div className="project__container">
-               <form className="project__form">
-               <h3> CONTACT FORM </h3> 
+            <>
+               <Header headerName="contact form" minor={true} />
+               <div className="project__container">
+                  <form className="project__form" onSubmit={handleFormSent}>
 
-                  <div className="project__input" first="">
-                     <a> NAME </a> 
-                     <input className="project__input__text" id="project__input__name" placeholder="Anthony Fantano"/>
-                  </div> 
+                     <div className="project__input" first="">
+                        <a> NAME </a> 
+                        <input className="project__input__text" id="project__input__name" placeholder="Anthony Fantano" required/>
+                     </div> 
 
-                  <div className="project__input" second="">
-                     <a> PHONE (OPTIONAL) </a> 
-                     <input type="tel" id="project__input__phone" placeholder="999-999-9999" className="project__input__text"/> 
-                  </div>
+                     <div className="project__input" second="">
+                        <a> PHONE (OPTIONAL) </a> 
+                        <input type="tel" id="project__input__phone" placeholder="999-999-9999" className="project__input__text" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/> 
+                     </div>
 
-                  <div className="project__input" third="">
-                     <a> EMAIL </a> 
-                     <input type="email" placeholder="email@example.com" id="project__input__email" className="project__input__text"/>
-                  </div>
+                     <div className="project__input" third="">
+                        <a> EMAIL </a> 
+                        <input type="email" placeholder="email@example.com" id="project__input__email" className="project__input__text" required/>
+                     </div>
 
-                  <div className="project__input" fourth="">
-                     <a> MESSAGE </a> 
-                     <textarea className="project__input__text" id="project__input__message" placeholder={`Tell us a little about your ${serviceName.toLowerCase()} project...`} rows="3"/>
-                  </div> 
+                     <div className="project__input" fourth="">
+                        <a> MESSAGE </a> 
+                        <textarea className="project__input__text" id="project__input__message" placeholder={`Tell us a little about your ${serviceName.toLowerCase()} project...`} rows="3" required/>
+                     </div> 
 
-                  <motion.input  whileHover={{backgroundColor: '#a6a6a6' }} transition={{duration: 0.25}} className="project__input__submit" type="submit" value="SUBMIT" onClick={handleFormSent} />
+                     <motion.input  whileHover={{backgroundColor: '#a6a6a6' }} transition={{duration: 0.25}} className="project__input__submit" type="submit" value="SUBMIT"  />
 
-               </form>
-            </div>
+                  </form>
+               </div>
+            </>
 
          : 
             <div className="project__sent">

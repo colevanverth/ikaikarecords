@@ -24,6 +24,10 @@ const Services = ({services}) => {
       <>  
          <Head>
             <title> Services - Ikaika Records </title> 
+            <meta
+               name='description'
+               content='Offering in-person and remote music services including studio recording and sound mixing. A service that you need not listed? Contact us for a quote.' 
+            />
          </Head> 
 
          <div className="services__content__image"/> 

@@ -1,12 +1,19 @@
 import { motion }  from "framer-motion"
 import { appear } from '../components/Appear'; 
 import Image from "next/image" 
-
+import Head from "next/head"
 import Header from "../components/Header"
 
 const About = () => { 
    return (
       <>
+       <Head>
+            <title> About - Ikaika Records </title> 
+            <meta
+               name='description'
+               content='The origin and mission of Ikaika Records and its founder, CJ Ikaika.' 
+            />
+         </Head> 
          <div className="about__content__image"/>
          <div className="about__content__transition"/>
          <div className="about__content">

@@ -71,6 +71,7 @@ h1, h2, h3 {
 p {
   font-size: 18px;
   font-family: "SpaceGrotesk-Regular", sans-serif;
+  color: #A4ACB4;
 }
 
 a {
@@ -107,7 +108,8 @@ a {
 }
 .servicepage__description img {
   width: 100%;
-  height: 500px;
+  height: 400px;
+  object-fit: cover;
   padding-bottom: 1rem;
 }
 
@@ -687,7 +689,7 @@ header a {
 }
 
 .project__container {
-  padding: 4rem 2rem 8rem 2rem;
+  padding: 4rem 2rem 4rem 2rem;
   justify-content: center;
   display: flex;
 }
