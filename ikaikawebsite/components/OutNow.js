@@ -41,7 +41,7 @@ const OutNow = ({outnows}) => {
       <>
          <Header headerName='out now'/> 
          <div className='outnow__container'> 
-           <motion.section drag="x" dragConstraints={{left: -300, right: 0}} animate={{x, transition: {duration: 0.5}}} variants={appear} initial='hidden' whileInView='visible' viewport={{once: true}} className='outnow'>
+           <motion.section dragConstraints={{left: -300, right: 0}} animate={{x, transition: {duration: 0.5}}} variants={appear} initial='hidden' whileInView='visible' viewport={{once: true}} className='outnow'>
                {outnows?.data?.map((item, index) => { 
                   return ( 
                      <div className='music__container' key={item.id}> 

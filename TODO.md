@@ -1,8 +1,8 @@
 ## Todo
 
 ### Urgent
-- [ ] Update password information in encrypted accounts document. 
-- [ ] Fix panning bug.
+- [x] Update password information in encrypted accounts document. 
+- [x] Fix panning bug.
 - [ ] Add star background and rotating disk in navigation bar. 
 - [ ] Ensure that the PostgresSQL database is pushed to GitHub.
 - [ ] Figma branding guidelines (delete everything else).
