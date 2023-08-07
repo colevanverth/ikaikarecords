@@ -13,9 +13,10 @@
     "@sendgrid/client": "^7.7.0",
     "@strapi/plugin-i18n": "4.12.1",
     "@strapi/plugin-users-permissions": "4.12.1",
-    "@strapi/provider-upload-cloudinary": "4.12.1",
+    "@strapi/provider-upload-cloudinary": "^4.12.1",
     "@strapi/strapi": "4.12.1",
     "better-sqlite3": "7.4.6",
+    "node-postgres": "^0.6.2",
     "pg": "^8.11.2",
     "pg-connection-string": "^2.6.2"
   },
@@ -26,7 +27,7 @@
     "uuid": "de720a5a-410d-42c0-ba19-056a827a52bc"
   },
   "engines": {
-    "node": "16.18.1",
+    "node": "18.12.1",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
