@@ -8,7 +8,7 @@ import Image from "next/image"
 import Head from 'next/head'
 
 export async function getStaticProps() {
-   const res = await fetch(`http://127.0.0.1:1337/api/services`, {method: "GET"})
+   const res = await fetch(`https://strapi-cms-production-b766.up.railway.app/api/services`, {method: "GET"})
    const services = await res.json()
    console.log("test");
   

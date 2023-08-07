@@ -2,7 +2,7 @@ import Landing from '../components/Landing'
 import Head from 'next/head'
 
 export async function getStaticProps() {
-   const res = await fetch(`http://127.0.0.1:1337/api/outnows`, {method: "GET"})
+   const res = await fetch(`https://strapi-cms-production-b766.up.railway.app/api/outnows`, {method: "GET"})
    const outnows = await res.json()
 
    return {
