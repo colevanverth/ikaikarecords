@@ -84,7 +84,7 @@ const Services = ({services}) => {
                   })}
                    <div className='service__custom'>
                      <h3> CUSTOM SERVICES </h3> 
-                     <p> Don't see the service you need? We love working on custom projects. Please <a href='/contact'>contact us</a> for a quote.</p>
+                     <p> `Don't see the service you need? We love working on custom projects. Please `<a href='/contact'>contact us</a> for a quote.</p>
                   </div> 
                </main> 
          </div>
