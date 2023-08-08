@@ -113,7 +113,6 @@ const About = ({outnows}) => {
                </div> 
             </div> 
          </motion.div>
-         <OutNow outnows={outnows} /> 
       </>
    )
 }
