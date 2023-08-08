@@ -1,17 +1,52 @@
 import { motion }  from "framer-motion"
 import { appear } from '../components/Appear'; 
+import { useState, useEffect } from 'react';
 import Image from "next/image" 
 import Head from "next/head"
 import Header from "../components/Header"
+import OutNow from "../components/OutNow"
 
-const About = () => { 
+const meta_title = 'About - Ikaika Records' 
+const meta_description = 'The origin and mission of Ikaika Records and its founder, CJ Ikaika.'
+
+const About = ({outnows}) => { 
+   const [href, setHref] = useState("");
+   useEffect( ()=> {
+      setHref(window.location.href);
+   })
+
    return (
       <>
        <Head>
+           <meta
+               name="description" 
+               content={meta_description} 
+            />
+            <meta
+               property='og:site_name'
+               content='Ikaika Records'
+            />
+            <meta
+               property='og:title'
+               content={meta_title}
+            />
+            <meta
+               property='og:description'
+               content={meta_description}
+            />
+            <meta 
+               property='og:image' 
+               content='https://res.cloudinary.com/daazndobg/image/upload/v1691462361/Ikaika-Brand-Mark-RGB-ColorMedium_dx8psw.png'
+            />
+            <meta
+               property='og:url'
+               content={href}
+            />
+
             <title> About - Ikaika Records </title> 
             <meta
                name='description'
-               content='The origin and mission of Ikaika Records and its founder, CJ Ikaika.' 
+               content={meta_description}
             />
          </Head> 
          <div className="about__content__image"/>
@@ -78,6 +113,7 @@ const About = () => {
                </div> 
             </div> 
          </motion.div>
+         <OutNow outnows={outnows} /> 
       </>
    )
 }

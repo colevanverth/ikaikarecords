@@ -38,9 +38,11 @@ export async function getStaticProps({ params }) {
    return { props: { service } }
 }
 
+
 const ServicePage = ({service }) => {
    const pageTitle = service.attributes.name + ' - Ikaika Records' // Note that this has to set here and not in the JSX otherwise it causes a problem.
    const [pageType, setPageType] = useState("");
+   const [href, setHref] = useState("");
 
    useEffect( ()=> {
       // Checks to see if there is a calendly link associated with the service
@@ -50,6 +52,7 @@ const ServicePage = ({service }) => {
       else { 
          setPageType("form");
       }
+      setHref(window.location.href);
    })
    return (
       <>
@@ -60,6 +63,10 @@ const ServicePage = ({service }) => {
             content={service.attributes.metadescription} 
          />
          <meta
+            property='og:site_name'
+            content='Ikaika Records'
+         />
+         <meta
             property='og:title'
             content={pageTitle}
          />
@@ -68,9 +75,35 @@ const ServicePage = ({service }) => {
             content={service.attributes.metadescription}
          />
          <meta 
-            property='og-image' 
+            property='og:image' 
             content={service.attributes.imageLink}
          />
+         <meta
+            property='og:url'
+            content={href}
+         />
+         <meta
+            property='twitter:site'
+            content='@ikaikarecords'
+         />
+         <meta
+            property='twitter:title'
+            content={pageTitle}
+         />
+         <meta
+            property='twitter:description'
+            content={service.attributes.metadescription}
+         />
+         <meta
+            property='twitter:card'
+            content='summary_large_image'
+         />
+         <meta
+            property='twitter:image:src'
+            content={service.attributes.imageLink}
+         />
+
+
       </Head>
       <div className="radial__gradient"> 
          <div className="page__padding" />

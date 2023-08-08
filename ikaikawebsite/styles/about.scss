@@ -2,6 +2,7 @@
    background: url('../public/aboutimage.jpeg');
    background-size: cover; 
    height: 12rem;
+   background-position: 50% 50%;
 }
 
 .about__content__transition { 
@@ -24,7 +25,7 @@ background: linear-gradient(167.94deg, #151515 55.55%, #122028 81.68%);
    justify-content: center;
       padding: 4rem 2rem;
    .about {
-      width: 1400px;
+      width: $width-100;
       display: flex;
       .about__vision { 
          h2 { 
