@@ -13,8 +13,9 @@ import {motion} from "framer-motion"
  * Generates service pages on build; `params` is exposed to getStaticProps()
 */
 export async function getStaticPaths() {
-  const res = await fetch(`https://strapi-cms-production-b766.up.railway.app/api/services`)
-  const services = await res.json()
+   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/services' : 'http://127.0.0.1:1337/api/services')
+   const res = await fetch(url)
+   const services = await res.json()
 
    const paths = services.data?.map((item) => { 
       return {
@@ -29,14 +30,16 @@ export async function getStaticPaths() {
  * Pulls service object corresponding to current slug and creates a prop for that service.
 */
 export async function getStaticProps({ params }) {
-  const res = await fetch(`https://strapi-cms-production-b766.up.railway.app/api/services/?filters[siteLink][$eq]=${params.id}`)
-  const serviceData = await res.json();
+   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/services' : 'http://127.0.0.1:1337/api/services')
+   const res = await fetch(`${url}/?filters[siteLink][$eq]=${params.id}`)
+   const serviceData = await res.json();
    const service = serviceData.data[0];
 
-  return { props: { service } }
+   return { props: { service } }
 }
 
-const ServicePage = ({service}) => {
+const ServicePage = ({service }) => {
+   const pageTitle = service.attributes.name + ' - Ikaika Records' // Note that this has to set here and not in the JSX otherwise it causes a problem.
    const [pageType, setPageType] = useState("");
 
    useEffect( ()=> {
@@ -51,10 +54,22 @@ const ServicePage = ({service}) => {
    return (
       <>
     <Head>
-         <title>{service.attributes.name} - Ikaika Records</title> 
+         <title>{pageTitle}</title> 
          <meta
             name='description'
             content={service.attributes.metadescription} 
+         />
+         <meta
+            property='og:title'
+            content={pageTitle}
+         />
+         <meta
+            property='og:description'
+            content={service.attributes.metadescription}
+         />
+         <meta 
+            property='og-image' 
+            content={service.attributes.imageLink}
          />
       </Head>
       <div className="radial__gradient"> 

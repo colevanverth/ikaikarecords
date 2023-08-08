@@ -2,12 +2,9 @@
 
 ### Urgent
 
-- [ ] Set up environment variables for local development.
 - [ ] Finish writing how to use the site. 
 - [ ] Meta data fix for service page. 
-- [ ] Email styling redo. 
 - [ ] Add default/description things into the CMS.
-- [x] Fix contact having no underline bug.
 
 ### Next
 - [ ] Integrate new images and GIF onto site. 
@@ -16,6 +13,7 @@
 - [ ] Launch the site.
 
 ### Potential Style Integrations (High Priority)
+- [ ] Add product images into the meta data.
 - [ ] Fix side spacing on the about page. 
 - [ ] Markdown files for each service. 
 - [ ] Fix background on headers to be centered in the middle.
@@ -36,6 +34,7 @@
 - [ ] Migrate the API calls from Express back to NextJS. 
 - [ ] Fix p text rendering too large on mobile. 
 - [ ] Make the header size decrease on mobile scaling.
+- [ ] Email styling redo. 
 
 ### Potential Style Integrations (Low Priority)
 - [ ] Trailing shooting star cursor.
@@ -49,4 +48,6 @@
 - [x] Ensure that the PostgresSQL database is pushed to GitHub.
 - [x] Figma branding guidelines (delete everything else).
 - [x] Style outbound CJ Ikaika email. 
-- [x] Launch/test/cleanup new Express function for SendGrid. 
+- [x] Launch/test/cleanup new Express function for SendGrid.
+- [x] Fix contact having no underline bug.
+- [x] Set up environment variables for local development.

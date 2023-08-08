@@ -22,7 +22,7 @@ const ContactForm = ({serviceName}) => {
       }
 
       // Send contact info to backend for node mailer to process
-      const res = await fetch("https://ikaikarecords-production.up.railway.app/email", {
+      const res = await fetch("/api/sendgrid", {
          method: "POST",
          body: JSON.stringify(contactInfo),
          headers: {

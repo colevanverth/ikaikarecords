@@ -8,9 +8,9 @@ import Image from "next/image"
 import Head from 'next/head'
 
 export async function getStaticProps() {
-   const res = await fetch(`https://strapi-cms-production-b766.up.railway.app/api/services`, {method: "GET"})
+   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/services' : 'http://127.0.0.1:1337/api/services')
+   const res = await fetch(url, {method: "GET"})
    const services = await res.json()
-   console.log("test");
   
    return {
       props: {

@@ -7,7 +7,7 @@ const Newsletter = () => {
 
    const handleFormSubmit = async (e) => { 
       e.preventDefault();
-      const address = 'https://ikaikarecords-production.up.railway.app/mailchimp'
+      const address = '/api/newsletter'
       const emailValue = document.getElementById('footer__input__text').value; 
       const email = JSON.stringify({email: emailValue})
       setSent(true);
