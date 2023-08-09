@@ -111,8 +111,10 @@ const ServicePage = ({service }) => {
 
          { pageType == "calendar" ? 
                <>
-                   <div className="calendly-inline-widget" data-url={`https://calendly.com/ikaikarecords/30min?hide_gdpr_banner=1&background_color=161A1E&text_color=ffffff&primary_color=1C6590`} style={{height: 850}}></div>
-         <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></Script> 
+              
+                  <div className="calendly-inline-widget" data-url={`${service.attributes.calendlyLink}?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=161a1e&text_color=f5f7fb&primary_color=1c6590`} style={{height:850}}></div>
+                  <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></Script>
+
                </>
          : null }
 
@@ -125,7 +127,7 @@ const ServicePage = ({service }) => {
          </div> 
          { pageType == "form" ? <ContactForm serviceName={service.attributes.name}/> : null } 
 
-      { service.attributes.siteLink == "studio-recording" ? 
+      { service.attributes.siteLink == "in-person" ? 
             <>
                <Header headerName="recording equipment" minor={true} />
                <div className="content__container">
