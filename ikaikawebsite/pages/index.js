@@ -1,14 +1,21 @@
 import Landing from '../components/Landing';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
 
 const meta_description = 'Ikaika Records is democratizing the music industry with an artist first approach, providing music services, and a home for a growing community of artists.';
 const meta_title = 'Ikaika Records - Record label, audio services, and community'
 
 export async function getStaticProps() {
-   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/outnows' : 'http://127.0.0.1:1337/api/outnows')
-   const res = await fetch(url, {method: "GET"})
-   const outnows = await res.json()
+   // Get outnows. 
+   const outnowsUrl = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/outnows' : 'http://127.0.0.1:1337/api/outnows')
+   const outnowsRes = await fetch(outnowsUrl, {method: "GET"})
+   const outnows = await outnowsRes.json()
+
+   // // Get social media links. 
+   // const socialsUrl = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/social' : 'http://127.0.0.1:1337/api/social')
+   // const socialsRes = await fetch(socialsUrl, {method: "GET"})
+   // const socialsData = await socialsRes.json()
+   // const socials = await socialsData.data.attributes
 
    return {
       props: {

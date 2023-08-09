@@ -29,7 +29,7 @@ html {
 
 * {
   font-size: 18px;
-  color: #ffffff;
+  color: #F5F7FB;
   text-decoration: none;
   list-style: none;
   font-family: "SpaceGrotesk-SemiBold", sans-serif;
@@ -178,7 +178,7 @@ nav .navigation__menu li div {
   position: relative;
   height: 1px;
   width: 0;
-  background: #ffffff;
+  background: #F5F7FB;
   transition: all 0.5s;
 }
 nav .navigation__menu li a {
@@ -250,9 +250,9 @@ nav .navigation__button__on {
   border-top: none;
   border-left: none;
   border-right: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #F5F7FB;
   background: #25272b;
-  color: #ffffff;
+  color: #F5F7FB;
 }
 .form__container form .input__text:focus {
   outline: none !important;
@@ -264,7 +264,7 @@ nav .navigation__button__on {
   margin-top: 1rem;
   width: 100%;
   border: none;
-  background: #ffffff;
+  background: #F5F7FB;
   cursor: pointer;
   color: #161A1E;
 }
@@ -410,7 +410,7 @@ footer ul {
 footer ul .footer__label {
   font-family: "SpaceGrotesk-Medium", sans-serif;
   font-size: 13.5px;
-  color: #ffffff;
+  color: #F5F7FB;
 }
 footer ul li a {
   color: #828282;
@@ -424,7 +424,7 @@ footer ul li a img {
   margin-left: 0.25rem;
 }
 footer ul li:hover a {
-  color: #ffffff;
+  color: #F5F7FB;
 }
 footer ul li:hover a img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(169deg) brightness(114%) contrast(102%);
@@ -586,10 +586,10 @@ header a {
   margin-top: 1rem;
   display: inline-block;
   padding: 0.5rem 2.5rem;
-  background: #ffffff;
+  background: #F5F7FB;
   color: #161A1E;
   width: max-content;
-  border: 1px solid #ffffff;
+  border: 1px solid #F5F7FB;
   margin-right: 2rem;
   transition: all 0.25s linear;
 }
@@ -611,9 +611,9 @@ header a {
   align-items: center;
   padding: 0.5rem 2.5rem;
   background: transparent;
-  color: #ffffff;
+  color: #F5F7FB;
   width: max-content;
-  border: 1px solid #ffffff;
+  border: 1px solid #F5F7FB;
   transition: linear all 0.25s;
 }
 .button__big__hollow img {
@@ -634,7 +634,7 @@ header a {
   padding: 0.5rem 1.5rem;
   margin-top: 0.5rem;
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #F5F7FB;
 }
 .button__small img {
   margin-left: 0.25rem;
@@ -754,7 +754,7 @@ header a {
   border-top: none;
   border-left: none;
   border-right: none;
-  border: 1px solid #ffffff;
+  border: 1px solid #F5F7FB;
   background: #161A1E;
 }
 .project__form .project__input__text:focus {
@@ -766,7 +766,7 @@ header a {
   font-family: "SpaceGrotesk-Medium", sans-serif;
   padding: 0.5rem 6rem;
   border: none;
-  background: #ffffff;
+  background: #F5F7FB;
   cursor: pointer;
   color: #161A1E;
 }
@@ -858,7 +858,7 @@ header a {
   position: relative;
   height: 1px;
   width: 0;
-  background: #ffffff;
+  background: #F5F7FB;
   transition: all 0.5s;
 }
 .navigation__mobile__container nav .navigation__mobile__links li:hover div {
@@ -930,7 +930,7 @@ header a {
 .about__container .about .about__vision a {
   font-size: 18px;
   font-family: "SpaceGrotesk-SemiBold", sans-serif;
-  color: #ffffff;
+  color: #F5F7FB;
 }
 .about__container .about .about__vision p {
   max-width: 900px;

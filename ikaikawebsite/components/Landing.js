@@ -44,7 +44,7 @@ return (
                      VIEW  SERVICES
                   </Link>
 
-                  <Button link='discord' text='join the community' className='button__big__hollow' icon="true" />
+                  <Button link="test" text='join the community' className='button__big__hollow' icon="true" />
 
                </motion.div>
             </motion.main> 
