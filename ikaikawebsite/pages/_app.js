@@ -7,20 +7,6 @@ import Newsletter from '../components/Newsletter';
 import Navigation from '../components/Navigation'; 
 import NavigationMobile from '../components/NavigationMobile'; 
 
-const twitter = 'ikaikarecords';
-export async function getStaticProps() {
-   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/social' : 'http://127.0.0.1:1337/api/social')
-   const res = await fetch(url, {method: "GET"})
-   const socialData = await res.json()
-   const socials = socialData.data.attributes
-   console.log(socials)
-   return {
-      props: {
-         socials
-      },
-   }
-}
-
 export default function App({ Component, pageProps, socials }) {
 
    const [mobile, setMobile] = useState(false); 

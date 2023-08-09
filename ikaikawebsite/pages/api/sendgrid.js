@@ -6,7 +6,7 @@ export default function handler(req, res) {
    const contactInfo = req.body
    console.log(contactInfo)
    const msg = {
-      to: 'colevanverth@gmail.com',
+      to: process.env.CJ_EMAIL,
       from: 'ikaikarecordstemp@gmail.com', // Use the email address or domain you verified above
       subject: `New service request (${contactInfo.service.toLowerCase()}).`,
       text: `

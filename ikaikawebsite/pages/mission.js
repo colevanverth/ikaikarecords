@@ -6,7 +6,7 @@ import Head from "next/head"
 import Header from "../components/Header"
 import OutNow from "../components/OutNow"
 
-const meta_title = 'About - Ikaika Records' 
+const meta_title = 'Mission  - Ikaika Records' 
 const meta_description = 'The origin and mission of Ikaika Records and its founder, CJ Ikaika.'
 
 const About = ({outnows}) => { 
@@ -52,7 +52,7 @@ const About = ({outnows}) => {
          <div className="about__content__image"/>
          <div className="about__content__transition"/>
          <div className="about__content">
-            <Header headerName="about" /> 
+            <Header headerName="mission" /> 
             <div className="about__container">
                <div className="about">
                   <motion.div  className="about__vision" variants={appear} initial='hidden' whileInView='visible' viewport={{once: true}}>

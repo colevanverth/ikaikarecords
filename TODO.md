@@ -11,19 +11,16 @@
 - [ ] Set up Calendly.
 - [ ] Launch the site.
 
-### Potential Style Integrations (High Priority)
-- [ ] Contact page
+### Potential Style Integrations (High Priority) 
+- [ ] Fix p text rendering too large on mobile. 
+
+### Potential Style Integrations (Low Priority)
 - [ ] Service makeover
 	* Markdown files. 
 - [ ] Thumbnail animations / hyperlinks. 
 - [ ] Buttons/underlays get bouncing audio effect.
-- [ ] Change about to be called mission.
 - [ ] Staggered animation on outnows/anything else needing stagger. 
-- [ ] Fix p text rendering too large on mobile. 
 - [ ] Line effect thing and bouncing/glow animation on icons.
-	* Actions for each of the things at the bottom.
-
-### Potential Style Integrations (Low Priority)
 - [ ] Some kind of social proof component for the home page.
 - [ ] Star animation appearence on headers
 - [ ] Trailing shooting star cursor.
@@ -50,3 +47,4 @@
 - [x] Fix top spacing on service page. 
 - [x] Fix side spacing on the about page.
 - [x] Fix background on headers to be centered in the middle.
+- [x] Change about to be called mission.

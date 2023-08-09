@@ -11,7 +11,7 @@ const meta_description = 'Offering in-person and remote music services including
 const meta_title = 'Services - Ikaika Records'
 
 export async function getStaticProps() {
-   const url = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/services' : 'http://127.0.0.1:1337/api/services')
+   const url = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/services' : 'http://127.0.0.1:1337/api/services')
    const res = await fetch(url, {method: "GET"})
    const services = await res.json()
   
@@ -84,7 +84,7 @@ const Services = ({services}) => {
                   })}
                    <div className='service__custom'>
                      <h3> CUSTOM SERVICES </h3> 
-                     <p> Not seeing the service you need? We love working on custom projects. Please <a href='/contact'>contact us</a> for a quote.</p>
+                     <p> Not seeing the service you need? We love working on custom projects. Please <a href="mailto:business@ikaikarecords.us">contact us</a> for a quote.</p>
                   </div> 
                </main> 
          </div>

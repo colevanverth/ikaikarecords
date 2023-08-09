@@ -7,15 +7,9 @@ const meta_title = 'Ikaika Records - Record label, audio services, and community
 
 export async function getStaticProps() {
    // Get outnows. 
-   const outnowsUrl = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/outnows' : 'http://127.0.0.1:1337/api/outnows')
+   const outnowsUrl = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/outnows' : 'http://127.0.0.1:1337/api/outnows')
    const outnowsRes = await fetch(outnowsUrl, {method: "GET"})
    const outnows = await outnowsRes.json()
-
-   // // Get social media links. 
-   // const socialsUrl = (process.env.NODE_ENV == 'production' ? 'https://strapi-cms-production-b766.up.railway.app/api/social' : 'http://127.0.0.1:1337/api/social')
-   // const socialsRes = await fetch(socialsUrl, {method: "GET"})
-   // const socialsData = await socialsRes.json()
-   // const socials = await socialsData.data.attributes
 
    return {
       props: {
