@@ -14,24 +14,31 @@
   "attributes": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "Sound Mixing"
     },
     "tag": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "in person, $30/hr"
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "default": "When recording at our studio in Santa Cruz, our first priority is always your artistic expression. We’ll handle the technical stuff, so you can focus on what you do best. Need your recordings mixed or mastered after the session? We’ll offer you a 20% discount on our mixing & mastering services (valid for all Ikaika Records studio recordings). "
     },
     "calendlyLink": {
       "type": "string"
     },
     "siteLink": {
-      "type": "uid"
+      "type": "uid",
+      "required": true,
+      "default": "sound-mixing"
     },
     "imageLink": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "https://res.cloudinary.com/daazndobg/image/upload/v1691555565/istockphoto_622064544_612x612_f8248e4b07.jpg"
     },
     "metadescription": {
       "type": "text",

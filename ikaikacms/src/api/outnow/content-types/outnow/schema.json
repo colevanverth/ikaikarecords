@@ -4,7 +4,8 @@
   "info": {
     "singularName": "outnow",
     "pluralName": "outnows",
-    "displayName": "Outnow"
+    "displayName": "Outnow",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,16 +13,24 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "The Sound of My Dreams"
     },
     "artist": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "CJ Ikaika"
     },
     "spotifyLink": {
-      "type": "string"
+      "type": "string",
+      "default": "https://github.com/colevanverth/ikaikarecords",
+      "required": true
     },
     "imageLink": {
-      "type": "string"
+      "type": "string",
+      "default": "https://i.scdn.co/image/ab67616d0000b273c20531609c5e8af988023cda",
+      "required": true
     }
   }
 }
