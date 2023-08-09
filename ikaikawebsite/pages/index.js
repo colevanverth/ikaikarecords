@@ -7,7 +7,7 @@ const meta_title = 'Ikaika Records - Record label, audio services, and community
 
 export async function getStaticProps() {
    // Get outnows. 
-   const outnowsUrl = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/services' : 'http://127.0.0.1:1337/api/outnows')
+   const outnowsUrl = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/outnows' : 'http://127.0.0.1:1337/api/outnows')
    const outnowsRes = await fetch(outnowsUrl, {method: "GET"})
    const outnows = await outnowsRes.json()
 
