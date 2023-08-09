@@ -13,7 +13,7 @@ import {motion} from "framer-motion"
  * Generates service pages on build; `params` is exposed to getStaticProps()
 */
 export async function getStaticPaths() {
-   const url = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/services' : 'http://127.0.0.1:1337/api/services')
+   const url = (process.env.NODE_ENV == 'production' ? `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/services` : 'http://127.0.0.1:1337/api/services')
    const res = await fetch(url)
    const services = await res.json()
 
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
  * Pulls service object corresponding to current slug and creates a prop for that service.
 */
 export async function getStaticProps({ params }) {
-   const url = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/services' : 'http://127.0.0.1:1337/api/services')
+   const url = (process.env.NODE_ENV == 'production' ? `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/services` : 'http://127.0.0.1:1337/api/services')
    const res = await fetch(`${url}/?filters[siteLink][$eq]=${params.id}`)
    const serviceData = await res.json();
    const service = serviceData.data[0];

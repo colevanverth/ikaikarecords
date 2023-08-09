@@ -11,7 +11,7 @@ const meta_description = 'Offering in-person and remote music services including
 const meta_title = 'Services - Ikaika Records'
 
 export async function getStaticProps() {
-   const url = (process.env.NODE_ENV == 'production' ? process.env.NEXT_PUBLIC_STRAPI_URL + '/api/services' : 'http://127.0.0.1:1337/api/services')
+   const url = (process.env.NODE_ENV == 'production' ? `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/services` : 'http://127.0.0.1:1337/api/services')
    const res = await fetch(url, {method: "GET"})
    const services = await res.json()
   
