@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_socialmedias_socialmedias",
+  "info": {
+    "displayName": "socialmedias",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "twitter": {
+      "type": "string"
+    },
+    "discord": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    },
+    "contactemail": {
+      "type": "string"
+    },
+    "businessemail": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    }
+  }
+}
