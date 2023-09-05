@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "equipments",
+  "info": {
+    "singularName": "equipment",
+    "pluralName": "equipments",
+    "displayName": "Equipment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "equipment": {
+      "type": "richtext",
+      "required": true,
+      "default": "# Heading example  - This text editor uses markdown which is then rendered into HTML on the site.  - To organize groups of information, use a hashtag as done above to create a heading.  - Use a dash followed by a space to create a list of items.     - Use an indented dash followed by a space to create a nested list item.    - This is another nested list items.  # Another heading - Only headings, lists, and inner lists as demonstrated and explained above currently render correctly onto the site. "
+    }
+  }
+}

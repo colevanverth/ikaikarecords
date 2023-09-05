@@ -1,48 +1,48 @@
 // Font declarations
 @font-face {
-    font-family: 'SpaceGrotesk-SemiBold';
-    src: url('../fonts/SpaceGrotesk-SemiBold.ttf') format('woff'); 
+  font-family: "SpaceGrotesk-SemiBold";
+  src: url("../fonts/SpaceGrotesk-SemiBold.ttf") format("woff");
 }
 
 @font-face {
-    font-family: 'SpaceGrotesk-Regular';
-    src: url('../fonts/SpaceGrotesk-Regular.ttf') format('woff'); 
+  font-family: "SpaceGrotesk-Regular";
+  src: url("../fonts/SpaceGrotesk-Regular.ttf") format("woff");
 }
 
-@font-face { 
-    font-family: 'Archivo-Black';
-    src: url('../fonts/Archivo-Black.ttf') format('woff');
-    font-weight: 800; 
+@font-face {
+  font-family: "Archivo-Black";
+  src: url("../fonts/Archivo-Black.ttf") format("woff");
+  font-weight: 800;
 }
 
-@font-face { 
-    font-family: 'SpaceGrotesk-Medium'; 
-    src: url('../fonts/SpaceGrotesk-Medium.ttf') format('woff'); 
+@font-face {
+  font-family: "SpaceGrotesk-Medium";
+  src: url("../fonts/SpaceGrotesk-Medium.ttf") format("woff");
 }
 
 // Fonts
-$f-1: 'SpaceGrotesk-SemiBold', sans-serif;
-$f-2: 'SpaceGrotesk-Regular', sans-serif;
-$f-3: 'Archivo-Black', sans-serif;
-$f-5: 'SpaceGrotesk-Medium', sans-serif; 
+$f-1: "SpaceGrotesk-SemiBold", sans-serif;
+$f-2: "SpaceGrotesk-Regular", sans-serif;
+$f-3: "Archivo-Black", sans-serif;
+$f-5: "SpaceGrotesk-Medium", sans-serif;
 
 // Font sizes
-$s-h1: 75.76px; 
+$s-h1: 75.76px;
 $s-h2: 42.63px;
-$s-h3: 31.98px; 
+$s-h3: 31.98px;
 $s-h4: 23.99px;
-$s-p: 18px; 
-$s-a: 18px; 
-$s-p2: 13.5px; 
+$s-p: 18px;
+$s-a: 18px;
+$s-p2: 13.5px;
 
 // Neutral colors
-$neutral-50:  #F5F7FB; 
-$neutral-100: #A4ACB4; 
+$neutral-50: #f5f7fb;
+$neutral-100: #a4acb4;
 $neutral-150: #25272b;
-$neutral-200: #161A1E; 
+$neutral-200: #161a1e;
 
 // Primary colors
-$primary-50: #1C6590;
+$primary-50: #1c6590;
 
 // Media queries
 $query-50: 1350px;

@@ -27,9 +27,6 @@
       "required": true,
       "default": "When recording at our studio in Santa Cruz, our first priority is always your artistic expression. We’ll handle the technical stuff, so you can focus on what you do best. Need your recordings mixed or mastered after the session? We’ll offer you a 20% discount on our mixing & mastering services (valid for all Ikaika Records studio recordings). "
     },
-    "calendlyLink": {
-      "type": "string"
-    },
     "siteLink": {
       "type": "uid",
       "required": true,
@@ -44,6 +41,21 @@
       "type": "text",
       "required": true,
       "default": "A meta description that describes the service in about 150 characters. "
+    },
+    "displayCalendly": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "displayEquipment": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "displayForm": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   }
 }

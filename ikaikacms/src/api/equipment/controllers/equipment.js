@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * social controller
+ * equipment controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::social.social');
+module.exports = createCoreController('api::equipment.equipment');

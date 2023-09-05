@@ -1,20 +1,20 @@
-const sgMail = require('@sendgrid/mail')
+const sgMail = require("@sendgrid/mail");
 
 export default function handler(req, res) {
-   sgMail.setApiKey(process.env.SENDGRIDKEY);
-   // Set up payload. 
-   const contactInfo = req.body
-   console.log(contactInfo)
-   const msg = {
-      to: process.env.CJ_EMAIL,
-      from: 'website-form@ikaikarecords.us', // Use the email address or domain you verified above
-      subject: `New service request (${contactInfo.service.toLowerCase()}).`,
-      text: `
+  sgMail.setApiKey(process.env.SENDGRIDKEY);
+  // Set up payload.
+  const contactInfo = req.body;
+  console.log(contactInfo);
+  const msg = {
+    to: process.env.CJ_EMAIL,
+    from: "website-form@ikaikarecords.us", // Use the email address or domain you verified above
+    subject: `New service request (${contactInfo.service.toLowerCase()}).`,
+    text: `
          Name: ${contactInfo.name}
          Email: ${contactInfo.email}
          Phone: ${contactInfo.phone ? contactInfo.phone : "None Provided"}
          Message: ${contactInfo.message}`,
-      html: `
+    html: `
             
       <head>
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,39 +31,50 @@ export default function handler(req, res) {
       <div class="outer_container" style="background: #F9F9F9; padding: 18px; margin: 5px 0 18px 0; box-sizing: border-box;">
          <a style="font-weight: 600; font-size: 13.5px; color: #161A1E; margin: 0; padding: 0; box-sizing: border-box;">NAME</a>
          <div class="inner_container" style="background: white; padding: 9px; margin: 5px 0 18px 0; box-sizing: border-box;">
-            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${contactInfo.name}</p>
+            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${
+              contactInfo.name
+            }</p>
          </div>
          <a style="font-weight: 600; font-size: 13.5px; color: #161A1E; margin: 0; padding: 0; box-sizing: border-box;">EMAIL</a>
          <div class="inner_container" style="background: white; padding: 9px; margin: 5px 0 18px 0;  box-sizing: border-box;">
-            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${contactInfo.email}</p>
+            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${
+              contactInfo.email
+            }</p>
          </div>
          <a style="font-weight: 600; font-size: 13.5px; color: #161A1E; margin: 0; padding: 0; box-sizing: border-box;">PHONE NUMBER</a>
          <div class="inner_container" style="background: white; padding: 9px; margin: 5px 0 18px 0;  box-sizing: border-box;">
-            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${contactInfo.phone ? contactInfo.phone : "No phone number provided"}</p>
+            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${
+              contactInfo.phone ? contactInfo.phone : "No phone number provided"
+            }</p>
          </div>
          <a style="font-weight: 600; font-size: 13.5px; color: #161A1E; margin: 0; padding: 0; box-sizing: border-box;">MESSAGE</a>
          <div class="inner_container" style="background: white; padding: 9px; margin: 5px 0 18px 0;  box-sizing: border-box;">
-            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${contactInfo.message}</p>
+            <p style="font-size: 18px; color: #595E68; margin: 0; padding: 0; box-sizing: border-box;">${
+              contactInfo.message
+            }</p>
          </div>
       </div>
    </div>
 </body>
      
      
-      `
-   };
+      `,
+  };
 
-   // SendGrid API call (EcmaScript8 compatible).
-   (async () => {
-     try {
-       await sgMail.send(msg);
-     } catch (error) {
-       console.error(error);
-
-       if (error.response) {
-         console.error(error.response.body)
-       }
-     }
-   })();
-};
-
+  // SendGrid API call.
+  (async () => {
+    try {
+      const callee = await sgMail.send(msg);
+      if (!callee.ok) { 
+        res.status(500).end();
+      }
+      res.status(200);
+    } catch (error) {
+      console.error(error);
+      res.status(500).end();
+      if (error.response) {
+        console.error(error.response.body);
+      }
+    }
+  })();
+}
