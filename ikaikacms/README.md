@@ -1,4 +1,4 @@
-This contains the [Strapi](https://strapi.io/) CMS to manage Ikaika Records "services" and "out now music".
+This contains the [Strapi](https://strapi.io/) CMS to manage Ikaika Records services, new music releases, and the equipment list. 
 
 ## Setup Instructions
 
@@ -9,7 +9,7 @@ This contains the [Strapi](https://strapi.io/) CMS to manage Ikaika Records "ser
 
 ## Notes
 
-- The development database is seperate from the production database, which is hosted on Railway.
-- Assets such as images are stored in Cloudinary and not the database; however, Strapi is configured to [automatically integrate asset uploads with Cloudinary](https://strapi.io/blog/add-cloudinary-support-to-your-strapi-application).
+- There is no development database set up, so the production database is queried even in development (laziness). 
+- Strapi is configured to [automatically integrate asset uploads with Cloudinary](https://strapi.io/blog/add-cloudinary-support-to-your-strapi-application).
 - [This article](https://dev.to/yinks/how-to-create-and-deploy-a-strapi-project-on-railway-3kja) is invaluable for understanding how to set up Strapi to be hosted on Railway.
   _Copyright © Ikaika Records 2023. All Rights Reserved._
