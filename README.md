@@ -15,7 +15,7 @@ The file structure is as follows:
 
 ## Integrations
 
-There are two integretations facilitated through the NextJS API:
+There are two integretations facilitated through the NextJS API and one through Strapi:
 
 - [SendGrid](https://sendgrid.com/)
   - **Purpose**: Sends an email to CJ when a contact form for a "service" on the front-end has been filled out.
