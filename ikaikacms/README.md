@@ -1,4 +1,4 @@
-This contains the [Strapi](https://strapi.io/) CMS to manage Ikaika Records "services" and "out now music".
+This contains the [Strapi](https://strapi.io/) CMS to manage Ikaika Records services, new music releases, and the equipment list. 
 
 ## Setup Instructions
 
