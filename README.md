@@ -25,4 +25,4 @@ There are two integretations facilitated through the NextJS API and one through 
 - [Cloudinary](https://cloudinary.com/):
   - **Purpose:** Cloudinary stores image assets that can be accessed through Strapi that are present on the website front-end. 
 
-_Copyright © Ikaika Records 2023. All Rights Reserved._
+_Copyright © Ikaika Records 2023. All Rights Reserved._ 
