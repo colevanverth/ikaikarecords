@@ -46,6 +46,7 @@ export async function getStaticProps({ params }) {
   const service = serviceData.data[0];
 
   // Load equipment list if required by service display options.
+  var equipment = null;
   if (service.attributes.displayEquipment) {
     const equipment_url =
       process.env.NODE_ENV == "production"
@@ -53,7 +54,7 @@ export async function getStaticProps({ params }) {
         : "http://127.0.0.1:1337/api/equipment";
     const equipment_res = await fetch(equipment_url);
     const equipmentData = await equipment_res.json();
-    var equipment = equipmentData.data.attributes.equipment;
+    equipment = await equipmentData.data.attributes.equipment;
   }
 
   return { props: { service, equipment } };
