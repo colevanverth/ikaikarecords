@@ -39,7 +39,7 @@ const Footer = () => {
           <a className="footer__label"> SOCIALS </a>
           <li key={Math.random()}>
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
               {" "}
               Spotify <Image
                 src="/leaving.svg"
@@ -51,7 +51,7 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
               {" "}
               Twitter <Image
                 src="/leaving.svg"
@@ -63,7 +63,7 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
               {" "}
               Instagram{" "}
               <Image src="/leaving.svg" width={17} height={17} alt="" />{" "}
@@ -71,7 +71,7 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
               {" "}
               Youtube <Image
                 src="/leaving.svg"
@@ -83,7 +83,7 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
               {" "}
               Discord <Image
                 src="/leaving.svg"
@@ -110,10 +110,15 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a href="http://vanverth.com">
+            <a target="_blank" href="http://vanverth.com">
               {" "}
-              Website Designed by Van Verth Designs{" "}
-              <Image src="/leaving.svg" width={17} height={17} alt="" />
+              Website Created By Cole Van Verth{" "}
+              <Image
+                src="/leaving.svg"
+                width={17}
+                height={17}
+                alt="https://github.com/colevanverth"
+              />
             </a>{" "}
           </li>
         </ul>

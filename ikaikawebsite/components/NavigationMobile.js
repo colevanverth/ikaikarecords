@@ -43,7 +43,7 @@ const NavigationMobile = ({ setMobile }) => {
         <ul className="navigation__mobile__socials">
           <li key="1">
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
               {" "}
               <Image
                 src="/twitter-logo.svg"
@@ -55,7 +55,7 @@ const NavigationMobile = ({ setMobile }) => {
           </li>
           <li key="2">
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
               {" "}
               <Image
                 src="/youtube-logo.svg"
@@ -67,7 +67,7 @@ const NavigationMobile = ({ setMobile }) => {
           </li>
           <li key="3">
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
               {" "}
               <Image
                 src="/spotify-logo.svg"
@@ -79,7 +79,7 @@ const NavigationMobile = ({ setMobile }) => {
           </li>
           <li key="4">
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
               {" "}
               <Image
                 src="/instagram-logo.svg"
@@ -92,7 +92,7 @@ const NavigationMobile = ({ setMobile }) => {
           </li>
           <li key="5">
             {" "}
-            <a href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
               {" "}
               <Image
                 src="/discord-logo.svg"

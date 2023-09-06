@@ -115,19 +115,22 @@ a {
   padding-bottom: 1rem;
 }
 
-.equipment__list {
-  width: 720px;
+.equipment__list > ul {
   padding-bottom: 8rem;
   padding-top: 4rem;
 }
-.equipment__list li {
-  font-size: 23.99px;
-  font-family: "SpaceGrotesk-Medium", sans-serif;
-}
-.equipment__list > li {
-  padding-bottom: 1rem;
+.equipment__list ul {
+  width: 720px;
 }
 .equipment__list ul li {
+  font-size: 23.99px;
+  color: #f5f7fb;
+  font-family: "SpaceGrotesk-Medium", sans-serif;
+}
+.equipment__list ul ul {
+  padding-bottom: 1rem;
+}
+.equipment__list ul ul li {
   font-size: 18px;
   font-family: "SpaceGrotesk-Regular", sans-serif;
   list-style-type: square;
@@ -136,7 +139,7 @@ a {
   padding-top: 0.5rem;
   text-indent: 3rem;
 }
-.equipment__list ul li ul li {
+.equipment__list ul ul li ul li {
   list-style-type: "-";
   list-style-position: inside;
   text-indent: 6rem;
@@ -165,7 +168,8 @@ nav .navigation__socials li {
   transition: all 0.5s;
 }
 nav .navigation__socials li:hover {
-  filter: invert(32%) sepia(100%) saturate(410%) hue-rotate(158deg) brightness(85%) contrast(92%);
+  filter: invert(32%) sepia(100%) saturate(410%) hue-rotate(158deg)
+    brightness(85%) contrast(92%);
 }
 nav .navigation__menu {
   margin-left: auto;
@@ -429,7 +433,8 @@ footer ul li:hover a {
   color: #f5f7fb;
 }
 footer ul li:hover a img {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(169deg) brightness(114%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(169deg) brightness(114%) contrast(102%);
 }
 
 @media only screen and (max-width: 750px) {
@@ -495,31 +500,46 @@ header a {
 }
 
 .service {
-  border-radius: 10px;
   background: rgba(37, 39, 43, 0.6);
   display: flex;
 }
-.service > img {
-  padding-right: 2rem;
+.service .service__image__container {
   height: 350px;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  width: 50%;
+  overflow: hidden;
 }
-.service div {
-  padding-left: 2rem;
+.service .service__image__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease all;
+}
+.service .service__image__container img:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+.service p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.service .service__text {
+  padding-left: 4rem;
   padding-right: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
 }
-.service div .service__tag {
+.service .service__text .service__tag {
   font-size: 18px;
   color: #a4acb4;
   font-family: "SpaceGrotesk-Regular", sans-serif;
   line-height: 1.5rem;
 }
-.service div p {
+.service .service__text p {
   color: #a4acb4;
 }
 
@@ -528,25 +548,24 @@ header a {
     flex-direction: column;
     max-width: 600px;
   }
-  .service img {
+  .service .service__image__container {
     padding: 0 0 2rem 0;
-    border-radius: 10px 10px 0 0;
     width: 100%;
     height: 275px;
   }
-  .service div {
+  .service .service__text {
     width: 100%;
     padding-right: 2rem;
     padding-bottom: 2rem;
   }
 }
 @media only screen and (max-width: 750px) {
-  .service div {
+  .service .service__text {
     padding-right: 1rem;
     padding-left: 1rem;
   }
-  .service img {
-    height: 175px;
+  .service .service__image__container {
+    height: 250px;
   }
 }
 .service__custom {
@@ -623,7 +642,8 @@ header a {
 }
 
 .button__big__hollow:hover img {
-  filter: invert(0%) sepia(4%) saturate(4221%) hue-rotate(346deg) brightness(103%) contrast(84%);
+  filter: invert(0%) sepia(4%) saturate(4221%) hue-rotate(346deg)
+    brightness(103%) contrast(84%);
 }
 
 .button__small {
@@ -952,7 +972,11 @@ header a {
 }
 
 .about__cj__container {
-  background: radial-gradient(89.88% 89.88% at 50% 87.93%, #112028 0%, rgba(21, 24, 26, 0) 100%);
+  background: radial-gradient(
+    89.88% 89.88% at 50% 87.93%,
+    #112028 0%,
+    rgba(21, 24, 26, 0) 100%
+  );
   padding: 8rem 2rem;
   display: flex;
   justify-content: center;

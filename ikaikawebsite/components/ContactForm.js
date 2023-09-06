@@ -2,7 +2,7 @@ import Header from "./Header";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import Error from "./error" 
+import Error from "./error";
 
 const ContactForm = ({ serviceName }) => {
   const [formError, setFormError] = useState(false);
@@ -11,7 +11,6 @@ const ContactForm = ({ serviceName }) => {
   const [name, setName] = useState("");
 
   const handleFormSent = async (e) => {
-
     e.preventDefault(); // Prevent page reset
 
     // Info that gets sent by email
@@ -34,15 +33,15 @@ const ContactForm = ({ serviceName }) => {
           "Content-Type": "application/json",
         },
       });
-      if (!res.ok) { 
+      if (!res.ok) {
         setFormError(true);
-      }
-      else {
+        console.error("Received 500 when trying to send contact form");
+      } else {
         setFormSent(true); // Change the state
         setName(document.getElementById("project__input__name").value); // For success message
       }
-    } catch(error) {
-      console.log(error);
+    } catch (error) {
+      console.error(error);
       setFromError(true);
     }
   };
@@ -101,18 +100,24 @@ const ContactForm = ({ serviceName }) => {
                 transition={{ duration: 0.25 }}
                 className="project__input__submit"
                 type="submit"
-                value={!formConfirm ? "SUBMIT" : "CONFIRMING"} 
+                value={!formConfirm ? "SUBMIT" : "CONFIRMING"}
               />
             </form>
           </div>
         </>
       ) : null}
-      {formSent && !formError ? 
-        ( <div className="project__message">
+      {formSent && !formError ? (
+        <div className="project__message">
           Thanks {name}! We look forward to working with you and will get back
           to you as soon as possible.
-        </div> ) : null } 
-      {formError ? <div className="project__message"> <Error description="We were unable to receive your contact info. Please email us directly at cj.ikaika@ikaikarecords.us." /> </div> : null }
+        </div>
+      ) : null}
+      {formError ? (
+        <div className="project__message">
+          {" "}
+          <Error description="We were unable to receive your contact info. Please email us directly at cj.ikaika@ikaikarecords.us." />{" "}
+        </div>
+      ) : null}
     </>
   );
 };

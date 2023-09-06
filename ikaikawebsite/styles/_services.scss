@@ -11,18 +11,33 @@
 
 .service {
   // border: 1px solid #595E68;
-  border-radius: 10px;
   background: rgba(37, 39, 43, 0.6);
   display: flex;
-  > img {
-    padding-right: 2rem;
+  .service__image__container {
     height: 350px;
     object-fit: cover;
-    border-radius: 10px 0 0 10px;
+    width: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s ease all;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.5;
+      }
+    }
+  }
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
 
-  div {
-    padding-left: 2rem;
+  .service__text {
+    padding-left: 4rem;
     padding-right: 4rem;
     display: flex;
     flex-direction: column;
@@ -44,13 +59,12 @@
   .service {
     flex-direction: column;
     max-width: 600px;
-    img {
+    .service__image__container {
       padding: 0 0 2rem 0;
-      border-radius: 10px 10px 0 0;
       width: 100%;
       height: 275px;
     }
-    div {
+    .service__text {
       width: 100%;
       padding-right: 2rem;
       padding-bottom: 2rem;
@@ -60,12 +74,12 @@
 
 @media only screen and (max-width: $query-100) {
   .service {
-    div {
+    .service__text {
       padding-right: 1rem;
       padding-left: 1rem;
     }
-    img {
-      height: 175px;
+    .service__image__container {
+      height: 250px;
     }
   }
 }

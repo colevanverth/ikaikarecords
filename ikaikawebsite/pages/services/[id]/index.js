@@ -2,6 +2,7 @@ import Header from "../../../components/Header";
 import ContactForm from "../../../components/ContactForm";
 import EquipmentList from "../../../components/EquipmentList";
 
+import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Script from "next/script";
 import { useRouter } from "next/router";
@@ -33,18 +34,32 @@ export async function getStaticPaths() {
  * Pulls service object corresponding to current slug and creates a prop for that service.
  */
 export async function getStaticProps({ params }) {
-  const url =
+  // Load service info.
+  const service_url =
     process.env.NODE_ENV == "production"
       ? process.env.NEXT_PUBLIC_STRAPI_URL + "/api/services"
       : "http://127.0.0.1:1337/api/services";
-  const res = await fetch(`${url}/?filters[siteLink][$eq]=${params.id}`);
-  const serviceData = await res.json();
+  const service_res = await fetch(
+    `${service_url}/?filters[siteLink][$eq]=${params.id}`,
+  );
+  const serviceData = await service_res.json();
   const service = serviceData.data[0];
 
-  return { props: { service } };
+  // Load equipment list if required by service display options.
+  if (service.attributes.displayEquipment) {
+    const equipment_url =
+      process.env.NODE_ENV == "production"
+        ? process.env.NEXT_PUBLIC_STRAPI_URL + "/api/equipment"
+        : "http://127.0.0.1:1337/api/equipment";
+    const equipment_res = await fetch(equipment_url);
+    const equipmentData = await equipment_res.json();
+    var equipment = equipmentData.data.attributes.equipment;
+  }
+
+  return { props: { service, equipment } };
 }
 
-const ServicePage = ({ service }) => {
+const ServicePage = ({ service, equipment }) => {
   const pageTitle = service.attributes.name + " - Ikaika Records"; // Note that this has to set here and not in the JSX otherwise it causes a problem.
   const [href, setHref] = useState("");
 
@@ -118,7 +133,9 @@ const ServicePage = ({ service }) => {
           <>
             <Header headerName="recording equipment" minor={true} />
             <div className="content__container">
-              <EquipmentList />
+              <ReactMarkdown className="equipment__list">
+                {equipment}
+              </ReactMarkdown>
             </div>
           </>
         ) : null}

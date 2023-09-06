@@ -65,7 +65,7 @@ export default function handler(req, res) {
   (async () => {
     try {
       const callee = await sgMail.send(msg);
-      if (!callee.ok) { 
+      if (!callee.ok) {
         res.status(500).end();
       }
       res.status(200);

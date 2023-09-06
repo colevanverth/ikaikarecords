@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * equipment controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::equipment.equipment');
+module.exports = createCoreController("api::equipment.equipment");

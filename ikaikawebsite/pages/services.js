@@ -65,12 +65,14 @@ const Services = ({ services }) => {
                   viewport={{ once: true }}
                 >
                   <div className="service">
-                    <img
-                      alt={item.attributes.alt}
-                      width="50%"
-                      src={item.attributes.imageLink}
-                    />
-                    <div>
+                    <div className="service__image__container">
+                      <img
+                        alt={item.attributes.alt}
+                        width="50%"
+                        src={item.attributes.imageLink}
+                      />
+                    </div>
+                    <div className="service__text">
                       <a className="service__tag">
                         {" "}
                         {item.attributes.tag.toUpperCase()}{" "}

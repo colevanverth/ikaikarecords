@@ -15,21 +15,23 @@ const Newsletter = () => {
     const email = JSON.stringify({ email: emailValue });
     setSending(true);
     try {
-    const res = await fetch(address, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: email,
-    });
-    setSending(false);
-    if (!res.ok) { setError(true); } 
-    else {
-      setSent(true);
-    }
+      const res = await fetch(address, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: email,
+      });
+      setSending(false);
+      if (!res.ok) {
+        console.error("Received code 500 when trying to set up newsletter!");
+        setError(true);
+      } else {
+        setSent(true);
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setError(true);
     }
-  } 
+  };
 
   return (
     <section className="form__container">
@@ -56,7 +58,7 @@ const Newsletter = () => {
             transition={{ duration: 0.25 }}
             className="input__submit"
             type="submit"
-            value={ !sending ? "SUBSCRIBE" : "CONFIRMING..." }
+            value={!sending ? "SUBSCRIBE" : "CONFIRMING..."}
             id="footer__input__submit"
             required
           ></motion.input>
@@ -65,8 +67,8 @@ const Newsletter = () => {
           <p> Thanks for signing up to the Ikaika Records Newsletter! </p>
         ) : null}
         {error ? (
-          <Error description="We were unable to sign you up to our newsletter. Please try again later."/>
-        ) : null} 
+          <Error description="We were unable to sign you up to our newsletter. Please try again later." />
+        ) : null}
       </form>
     </section>
   );
