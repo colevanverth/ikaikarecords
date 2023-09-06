@@ -95,7 +95,7 @@ const Landing = ({ outnows }) => {
               link={process.env.NEXT_PUBLIC_LINK_DISCORD}
               text="join the community"
               className="button__big__hollow"
-              icon="true"
+              external="true"
             />
           </motion.div>
         </motion.main>
