@@ -1,5 +1,4 @@
-<img src="https://res.cloudinary.com/daazndobg/image/upload/v1691292031/Ikaika-Horizontal-Logo-RGB-Inverse-Medium_z7k0om.png" alt="MarineGEO circle logo" style=" width:200px;"/>
-This is an isolated monorepository containing the Ikaika Records logo, website front-end, and content managment system. This intellectual property of Ikaika Records was created by Cole Van Verth. 
+This is a monorepo containing the Ikaika Records logo, website front-end, and content managment system. This intellectual property of Ikaika Records was created by Cole Van Verth. 
 
 ## File Structure
 
