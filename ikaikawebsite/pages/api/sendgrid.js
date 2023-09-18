@@ -64,17 +64,14 @@ export default function handler(req, res) {
   // SendGrid API call.
   (async () => {
     try {
-      const callee = await sgMail.send(msg);
-      if (!callee.ok) {
-        res.status(500).end();
-      }
-      res.status(200);
+      sgMail.send(msg);
     } catch (error) {
       console.error(error);
       res.status(500).end();
       if (error.response) {
-        console.error(error.response.body);
+        console.error(`sendgrid.js: ${error.response.body}`);
       }
     }
+    res.status(200).end();
   })();
 }

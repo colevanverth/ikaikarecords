@@ -8,7 +8,7 @@ const Button = (props) => {
       whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.25)" }}
       transition={{ duration: 0.25 }}
       href={props.link}
-      target={props.external ? "_blank" : null} 
+      target={props.external ? "_blank" : null}
       rel={props.external ? "noreferrer" : null}
     >
       {props.text.toUpperCase()}

@@ -1,6 +1,5 @@
 export default function handler(req, res) {
   const email = req.body.email;
-  console.log(email);
 
   const data = {
     members: [
@@ -28,13 +27,13 @@ export default function handler(req, res) {
       if (!callee.ok) {
         res.status(500).end(); // End is neccesary to resolve - otherwise it does nothing.
       } else {
-        res.status(200).json(response.status);
+        res.status(200).json(callee.status);
       }
     } catch (error) {
       console.error(error);
       res.status(500).end();
       if (error.response) {
-        console.error(error.response.body);
+        console.error(`newsletter.js: ${error.response.body}`);
       }
     }
   })();

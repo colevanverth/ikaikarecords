@@ -22,13 +22,15 @@ const Newsletter = () => {
       });
       setSending(false);
       if (!res.ok) {
-        console.error("Received code 500 when trying to set up newsletter!");
+        console.error(
+          "Newsletter.js component: Received code 500 when trying to set up newsletter!",
+        );
         setError(true);
       } else {
         setSent(true);
       }
     } catch (error) {
-      console.error(error);
+      console.error(`Newsletter.js component: ${error}`);
       setError(true);
     }
   };

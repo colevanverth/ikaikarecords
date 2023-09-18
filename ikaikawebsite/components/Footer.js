@@ -39,7 +39,11 @@ const Footer = () => {
           <a className="footer__label"> SOCIALS </a>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}
+            >
               {" "}
               Spotify <Image
                 src="/leaving.svg"
@@ -51,7 +55,11 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_TWITTER}
+            >
               {" "}
               Twitter <Image
                 src="/leaving.svg"
@@ -63,7 +71,11 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}
+            >
               {" "}
               Instagram{" "}
               <Image src="/leaving.svg" width={17} height={17} alt="" />{" "}
@@ -71,7 +83,11 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}
+            >
               {" "}
               Youtube <Image
                 src="/leaving.svg"
@@ -83,7 +99,11 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_DISCORD}
+            >
               {" "}
               Discord <Image
                 src="/leaving.svg"
@@ -110,7 +130,11 @@ const Footer = () => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href="http://github.com/colevanverth">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="http://github.com/colevanverth"
+            >
               {" "}
               Website Created By Cole Van Verth{" "}
               <Image

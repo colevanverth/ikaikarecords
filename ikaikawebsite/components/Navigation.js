@@ -22,7 +22,11 @@ const Navigation = ({ setMobile }) => {
         <ul className="navigation__socials">
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_TWITTER}
+            >
               {" "}
               <Image
                 src="/twitter-logo.svg"
@@ -34,7 +38,11 @@ const Navigation = ({ setMobile }) => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_YOUTUBE}
+            >
               {" "}
               <Image
                 src="/youtube-logo.svg"
@@ -46,7 +54,11 @@ const Navigation = ({ setMobile }) => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_SPOTIFY}
+            >
               {" "}
               <Image
                 src="/spotify-logo.svg"
@@ -58,7 +70,11 @@ const Navigation = ({ setMobile }) => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_INSTAGRAM}
+            >
               {" "}
               <Image
                 src="/instagram-logo.svg"
@@ -71,7 +87,11 @@ const Navigation = ({ setMobile }) => {
           </li>
           <li key={Math.random()}>
             {" "}
-            <a rel="noreferrer" target="_blank" href={process.env.NEXT_PUBLIC_LINK_DISCORD}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={process.env.NEXT_PUBLIC_LINK_DISCORD}
+            >
               {" "}
               <Image
                 src="/discord-logo.svg"
