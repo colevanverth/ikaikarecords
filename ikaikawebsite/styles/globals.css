@@ -168,8 +168,7 @@ nav .navigation__socials li {
   transition: all 0.5s;
 }
 nav .navigation__socials li:hover {
-  filter: invert(32%) sepia(100%) saturate(410%) hue-rotate(158deg)
-    brightness(85%) contrast(92%);
+  filter: invert(32%) sepia(100%) saturate(410%) hue-rotate(158deg) brightness(85%) contrast(92%);
 }
 nav .navigation__menu {
   margin-left: auto;
@@ -433,8 +432,7 @@ footer ul li:hover a {
   color: #f5f7fb;
 }
 footer ul li:hover a img {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
-    hue-rotate(169deg) brightness(114%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(169deg) brightness(114%) contrast(102%);
 }
 
 @media only screen and (max-width: 750px) {
@@ -489,7 +487,7 @@ header a {
   }
 }
 .services__content__image {
-  background: url("../public/servicesimage.jpeg");
+  background: url("../public/pageservices.png");
   background-size: cover;
   height: 12rem;
   background-position: 50% 50%;
@@ -642,8 +640,7 @@ header a {
 }
 
 .button__big__hollow:hover img {
-  filter: invert(0%) sepia(4%) saturate(4221%) hue-rotate(346deg)
-    brightness(103%) contrast(84%);
+  filter: invert(0%) sepia(4%) saturate(4221%) hue-rotate(346deg) brightness(103%) contrast(84%);
 }
 
 .button__small {
@@ -913,7 +910,7 @@ header a {
 }
 
 .about__content__image {
-  background: url("../public/aboutimage.jpeg");
+  background: url("../public/pagemission.png");
   background-size: cover;
   height: 12rem;
   background-position: 50% 50%;
@@ -972,11 +969,7 @@ header a {
 }
 
 .about__cj__container {
-  background: radial-gradient(
-    89.88% 89.88% at 50% 87.93%,
-    #112028 0%,
-    rgba(21, 24, 26, 0) 100%
-  );
+  background: radial-gradient(89.88% 89.88% at 50% 87.93%, #112028 0%, rgba(21, 24, 26, 0) 100%);
   padding: 8rem 2rem;
   display: flex;
   justify-content: center;
