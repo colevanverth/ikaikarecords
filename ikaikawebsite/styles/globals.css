@@ -135,14 +135,15 @@ a {
   font-family: "SpaceGrotesk-Regular", sans-serif;
   list-style-type: square;
   list-style-position: inside;
-  color: #a4acb4;
+  color: #f5f7fb;
   padding-top: 0.5rem;
   text-indent: 3rem;
 }
 .equipment__list ul ul li ul li {
-  list-style-type: "-";
+  list-style-type: "- ";
   list-style-position: inside;
   text-indent: 6rem;
+  color: #a4acb4;
 }
 
 .navigation__container {

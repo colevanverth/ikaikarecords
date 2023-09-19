@@ -19,14 +19,15 @@
         font-family: $f-2;
         list-style-type: square;
         list-style-position: inside;
-        color: $neutral-100;
+        color: $neutral-50;
         padding-top: 0.5rem;
         text-indent: 3rem;
         ul {
           li {
-            list-style-type: "-";
+            list-style-type: "- ";
             list-style-position: inside;
             text-indent: 6rem;
+            color: $neutral-100; 
           }
         }
       }
